@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/flights-service.iml" filepath="$PROJECT_DIR$/flights-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flights-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/flights-service_main.iml" group="flights-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flights-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/flights-service_test.iml" group="flights-service" />
+    </modules>
+  </component>
+</project>

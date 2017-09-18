@@ -1,0 +1,39 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.3.RELEASE)
+
+2017-09-15 18:36:18.299  INFO 82262 --- [           main] io.specto.FlightsApplication             : Starting FlightsApplication on Andrews-MacBook-Pro-2.local with PID 82262 (/Users/andrewmorgan1/IdeaProjects/api-simulation-training/3-matching/flights-service.jar started by andrewmorgan1 in /Users/andrewmorgan1/IdeaProjects/api-simulation-training/3-matching)
+2017-09-15 18:36:18.302  INFO 82262 --- [           main] io.specto.FlightsApplication             : No active profile set, falling back to default profiles: default
+2017-09-15 18:36:18.350  INFO 82262 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e5e91e4: startup date [Fri Sep 15 18:36:18 CEST 2017]; root of context hierarchy
+2017-09-15 18:36:19.249  INFO 82262 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-15 18:36:19.259  INFO 82262 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-09-15 18:36:19.259  INFO 82262 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-09-15 18:36:19.325  INFO 82262 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-15 18:36:19.325  INFO 82262 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 978 ms
+2017-09-15 18:36:19.407  INFO 82262 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-15 18:36:19.410  INFO 82262 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-15 18:36:19.410  INFO 82262 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-15 18:36:19.410  INFO 82262 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-15 18:36:19.410  INFO 82262 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-15 18:36:19.598  INFO 82262 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e5e91e4: startup date [Fri Sep 15 18:36:18 CEST 2017]; root of context hierarchy
+2017-09-15 18:36:19.650  INFO 82262 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/flights],methods=[GET]}" onto public java.util.List<io.specto.Flight> io.specto.FlightsController.getFlights(int)
+2017-09-15 18:36:19.652  INFO 82262 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/management/kill],methods=[GET]}" onto public void io.specto.ManagementController.kill()
+2017-09-15 18:36:19.653  INFO 82262 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/management/health],methods=[GET]}" onto public void io.specto.ManagementController.health()
+2017-09-15 18:36:19.655  INFO 82262 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-15 18:36:19.655  INFO 82262 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-15 18:36:19.678  INFO 82262 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 18:36:19.678  INFO 82262 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 18:36:19.704  INFO 82262 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-15 18:36:19.794  INFO 82262 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-15 18:36:19.842  INFO 82262 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-15 18:36:19.845  INFO 82262 --- [           main] io.specto.FlightsApplication             : Started FlightsApplication in 1.805 seconds (JVM running for 2.192)
+2017-09-15 18:36:20.732  INFO 82262 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-15 18:36:20.733  INFO 82262 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-15 18:36:20.743  INFO 82262 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 10 ms
+2017-09-15 18:38:54.053  INFO 82262 --- [       Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e5e91e4: startup date [Fri Sep 15 18:36:18 CEST 2017]; root of context hierarchy
+2017-09-15 18:38:54.054  INFO 82262 --- [       Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown

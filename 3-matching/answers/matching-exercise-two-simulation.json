@@ -1,0 +1,49 @@
+{
+	"data": {
+		"pairs": [
+			{
+				"response": {
+					"status": 200,
+					"body": "[{\"origin\":\"Berlin\",\"destination\":\"Tokyo\",\"cost\":\"3064.92\",\"when\":\"01:19\"},{\"origin\":\"Amsterdam\",\"destination\":\"Bangkok\",\"cost\":\"4837.51\",\"when\":\"11:17\"},{\"origin\":\"Amsterdam\",\"destination\":\"Dubai\",\"cost\":\"4088.94\",\"when\":\"18:47\"}]",
+					"encodedBody": false,
+					"headers": {
+						"Content-Type": [
+							"application/json;charset=UTF-8"
+						],
+						"Date": [
+							"Fri, 15 Sep 2017 14:42:25 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					}
+				},
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/flights"
+					},
+					"method": {
+						"exactMatch": "GET"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"body": {
+						"exactMatch": ""
+					}
+				}
+			}
+		],
+		"globalActions": {
+			"delays": []
+		}
+	},
+	"meta": {
+		"schemaVersion": "v2",
+		"hoverflyVersion": "v0.12.2",
+		"timeExported": "2017-09-15T16:43:06+02:00"
+	}
+}
