@@ -7,33 +7,31 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v1.5.3.RELEASE)
 
-2017-09-18 11:18:03.249  INFO 85912 --- [           main] io.specto.FlightsApplication             : Starting FlightsApplication on Andrews-MacBook-Pro-2.local with PID 85912 (/Users/andrewmorgan1/IdeaProjects/api-simulation-training/2-api-simulation-basics/flights-service.jar started by andrewmorgan1 in /Users/andrewmorgan1/IdeaProjects/api-simulation-training/2-api-simulation-basics)
-2017-09-18 11:18:03.252  INFO 85912 --- [           main] io.specto.FlightsApplication             : No active profile set, falling back to default profiles: default
-2017-09-18 11:18:03.297  INFO 85912 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e5e91e4: startup date [Mon Sep 18 11:18:03 CEST 2017]; root of context hierarchy
-2017-09-18 11:18:04.188  INFO 85912 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
-2017-09-18 11:18:04.197  INFO 85912 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
-2017-09-18 11:18:04.198  INFO 85912 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
-2017-09-18 11:18:04.264  INFO 85912 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2017-09-18 11:18:04.264  INFO 85912 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 969 ms
-2017-09-18 11:18:04.360  INFO 85912 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2017-09-18 11:18:04.362  INFO 85912 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2017-09-18 11:18:04.362  INFO 85912 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2017-09-18 11:18:04.362  INFO 85912 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2017-09-18 11:18:04.363  INFO 85912 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2017-09-18 11:18:04.550  INFO 85912 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e5e91e4: startup date [Mon Sep 18 11:18:03 CEST 2017]; root of context hierarchy
-2017-09-18 11:18:04.603  INFO 85912 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/flights],methods=[GET]}" onto public java.util.List<io.specto.Flight> io.specto.FlightsController.getFlights(int)
-2017-09-18 11:18:04.604  INFO 85912 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/management/kill],methods=[GET]}" onto public void io.specto.ManagementController.kill()
-2017-09-18 11:18:04.606  INFO 85912 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/management/health],methods=[GET]}" onto public void io.specto.ManagementController.health()
-2017-09-18 11:18:04.607  INFO 85912 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2017-09-18 11:18:04.607  INFO 85912 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2017-09-18 11:18:04.626  INFO 85912 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-09-18 11:18:04.627  INFO 85912 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-09-18 11:18:04.654  INFO 85912 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-09-18 11:18:04.744  INFO 85912 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2017-09-18 11:18:04.790  INFO 85912 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
-2017-09-18 11:18:04.793  INFO 85912 --- [           main] io.specto.FlightsApplication             : Started FlightsApplication in 1.803 seconds (JVM running for 2.155)
-2017-09-18 11:18:05.741  INFO 85912 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2017-09-18 11:18:05.741  INFO 85912 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2017-09-18 11:18:05.754  INFO 85912 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
-2017-09-18 11:19:30.585  INFO 85912 --- [       Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e5e91e4: startup date [Mon Sep 18 11:18:03 CEST 2017]; root of context hierarchy
-2017-09-18 11:19:30.587  INFO 85912 --- [       Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-09-18 17:53:28.168  INFO 2022 --- [           main] io.specto.FlightsApplication             : Starting FlightsApplication on Andrews-MacBook-Pro-2.local with PID 2022 (/Users/andrewmorgan1/IdeaProjects/api-simulation-training/2-api-simulation-basics/flights-service.jar started by andrewmorgan1 in /Users/andrewmorgan1/IdeaProjects/api-simulation-training/2-api-simulation-basics)
+2017-09-18 17:53:28.171  INFO 2022 --- [           main] io.specto.FlightsApplication             : No active profile set, falling back to default profiles: default
+2017-09-18 17:53:28.221  INFO 2022 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e5e91e4: startup date [Mon Sep 18 17:53:28 CEST 2017]; root of context hierarchy
+2017-09-18 17:53:29.194  INFO 2022 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-09-18 17:53:29.206  INFO 2022 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-09-18 17:53:29.207  INFO 2022 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-09-18 17:53:29.281  INFO 2022 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-18 17:53:29.281  INFO 2022 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1063 ms
+2017-09-18 17:53:29.360  INFO 2022 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-18 17:53:29.363  INFO 2022 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-18 17:53:29.364  INFO 2022 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-18 17:53:29.364  INFO 2022 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-18 17:53:29.364  INFO 2022 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-18 17:53:29.565  INFO 2022 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e5e91e4: startup date [Mon Sep 18 17:53:28 CEST 2017]; root of context hierarchy
+2017-09-18 17:53:29.622  INFO 2022 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/flights],methods=[GET]}" onto public java.util.List<io.specto.Flight> io.specto.FlightsController.getFlights(int)
+2017-09-18 17:53:29.623  INFO 2022 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/management/kill],methods=[GET]}" onto public void io.specto.ManagementController.kill()
+2017-09-18 17:53:29.625  INFO 2022 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/management/health],methods=[GET]}" onto public void io.specto.ManagementController.health()
+2017-09-18 17:53:29.626  INFO 2022 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-18 17:53:29.626  INFO 2022 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-18 17:53:29.645  INFO 2022 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-18 17:53:29.645  INFO 2022 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-18 17:53:29.669  INFO 2022 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-18 17:53:29.755  INFO 2022 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-18 17:53:29.810  INFO 2022 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-09-18 17:53:29.814  INFO 2022 --- [           main] io.specto.FlightsApplication             : Started FlightsApplication in 1.996 seconds (JVM running for 2.609)
+2017-09-18 17:53:30.237  INFO 2022 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-18 17:53:30.237  INFO 2022 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-18 17:53:30.249  INFO 2022 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms

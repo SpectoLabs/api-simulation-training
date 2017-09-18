@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
 
 import static com.google.common.collect.Lists.newArrayList;
@@ -18,9 +19,9 @@ public class FlightGenerator {
 
     private final Random random = new Random();
 
-    public Flight generate(final int plusDays) {
-        final String origin = origins.get(random.nextInt(origins.size()));
-        final String destination = destinations.get(random.nextInt(destinations.size()));
+    public Flight generate(final int plusDays, Optional<String> from, Optional<String> to) {
+        final String origin = from.orElseGet(() -> origins.get(random.nextInt(origins.size())));
+        final String destination = to.orElseGet(() -> destinations.get(random.nextInt(destinations.size())));
 
         double doublePrice = 30 + (5000 - 30) * random.nextDouble();
         final BigDecimal price = new BigDecimal(doublePrice).setScale(2, HALF_UP);
