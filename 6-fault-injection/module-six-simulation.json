@@ -1,0 +1,98 @@
+{
+	"data": {
+		"pairs": [
+			{
+				"response": {
+					"status": 200,
+					"body": "[{\"origin\":\"London\",\"destination\":\"Tokyo\",\"cost\":\"360.08\",\"when\":\"20:13\"},{\"origin\":\"London\",\"destination\":\"Tokyo\",\"cost\":\"3609.77\",\"when\":\"05:01\"}]",
+					"encodedBody": false,
+					"headers": {
+						"Content-Type": [
+							"application/json;charset=UTF-8"
+						],
+						"Date": [
+							"Thu, 21 Sep 2017 14:14:52 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false
+				},
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/flights"
+					},
+					"method": {
+						"exactMatch": "GET"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": "plusDays=1"
+					},
+					"body": {
+						"exactMatch": ""
+					}
+				}
+			},
+			{
+				"response": {
+					"status": 200,
+					"body": "[\"SALE10\",\"SALE20\",\"SPECTO\"]",
+					"encodedBody": false,
+					"headers": {
+						"Content-Type": [
+							"application/json;charset=UTF-8"
+						],
+						"Date": [
+							"Thu, 21 Sep 2017 14:16:23 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false
+				},
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/discount-codes"
+					},
+					"method": {
+						"exactMatch": "GET"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": "plusDays=1"
+					},
+					"body": {
+						"exactMatch": ""
+					}
+				}
+			}
+		],
+		"globalActions": {
+			"delays": [
+        {
+          "urlPattern": "\\/discount-codes",
+          "httpMethod": "",
+          "delay": 2000
+        }
+      ]
+		}
+	},
+	"meta": {
+		"schemaVersion": "v4",
+		"hoverflyVersion": "v0.14.0",
+		"timeExported": "2017-09-21T15:16:59+01:00"
+	}
+}
