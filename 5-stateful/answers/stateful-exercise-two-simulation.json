@@ -1,0 +1,137 @@
+{
+	"data": {
+		"pairs": [
+			{
+				"response": {
+					"status": 200,
+					"body": "[{\"item\":\"bacon\"}]",
+					"encodedBody": false,
+					"headers": {
+						"Content-Type": [
+							"application/json;charset=UTF-8"
+						],
+						"Date": [
+							"Mon, 25 Sep 2017 12:03:33 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false
+				},
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/shopping-basket"
+					},
+					"method": {
+						"exactMatch": "GET"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": ""
+					},
+					"body": {
+						"exactMatch": ""
+					},
+					"requiresState": {
+						"basket": "bacon"
+					}
+				}
+			},
+			{
+				"response": {
+					"status": 200,
+					"body": "[]",
+					"encodedBody": false,
+					"headers": {
+						"Content-Type": [
+							"application/json;charset=UTF-8"
+						],
+						"Date": [
+							"Mon, 25 Sep 2017 12:03:33 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false
+				},
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/shopping-basket"
+					},
+					"method": {
+						"exactMatch": "GET"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": ""
+					},
+					"body": {
+						"exactMatch": ""
+					}
+				}
+			},
+			{
+				"response": {
+					"status": 200,
+					"body": "",
+					"encodedBody": false,
+					"headers": {
+						"Content-Length": [
+							"0"
+						],
+						"Date": [
+							"Mon, 25 Sep 2017 12:07:49 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false,
+					"transitionsState": {
+						"basket": "bacon"
+					}
+				},
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/shopping-basket"
+					},
+					"method": {
+						"exactMatch": "PUT"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": ""
+					},
+					"body": {
+						"jsonMatch": "{\"item\":\"bacon\"}"
+					}
+				}
+			}
+		],
+		"globalActions": {
+			"delays": []
+		}
+	},
+	"meta": {
+		"schemaVersion": "v4",
+		"hoverflyVersion": "v0.14.0",
+		"timeExported": "2017-09-25T14:43:27+02:00"
+	}
+}

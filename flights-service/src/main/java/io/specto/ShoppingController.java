@@ -10,6 +10,7 @@ import java.util.Set;
 
 import static com.google.common.collect.Sets.newHashSet;
 import static org.springframework.http.HttpStatus.OK;
+import static org.springframework.web.bind.annotation.RequestMethod.DELETE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.PUT;
 
@@ -29,5 +30,10 @@ public class ShoppingController {
     @RequestMapping(method = GET)
     public Set<ShoppingItem> getShoppingBasket() {
         return shoppingItemSet;
+    }
+
+    @RequestMapping(method = DELETE)
+    public void deleteShoppingBasket() {
+        shoppingItemSet.clear();
     }
 }
