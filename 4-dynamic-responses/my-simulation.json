@@ -1,0 +1,53 @@
+{
+	"data": {
+		"pairs": [
+			{
+				"response": {
+					"status": 200,
+					"body": "[{\"origin\":\"{{ Request.QueryParam.from }}\",\"destination\":\"{{ Request.QueryParam.to }}\",\"cost\":\"2667.97\",\"when\":\"20:34\"},{\"origin\":\"{{ Request.QueryParam.from }}\",\"destination\":\"{{ Request.QueryParam.to }}\",\"cost\":\"1176.61\",\"when\":\"12:52\"},{\"origin\":\"{{ Request.QueryParam.from }}\",\"destination\":\"{{ Request.QueryParam.to }}\",\"cost\":\"4897.12\",\"when\":\"17:46\"}]",
+					"encodedBody": false,
+					"headers": {
+						"Content-Type": [
+							"application/json;charset=UTF-8"
+						],
+						"Date": [
+							"Tue, 19 Sep 2017 14:04:43 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": true
+				},
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/flights"
+					},
+					"method": {
+						"exactMatch": "GET"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"globMatch": "from=*&to=*"
+					},
+					"body": {
+						"exactMatch": ""
+					}
+				}
+			}
+		],
+		"globalActions": {
+			"delays": []
+		}
+	},
+	"meta": {
+		"schemaVersion": "v4",
+		"hoverflyVersion": "v0.14.0",
+		"timeExported": "2017-09-19T16:05:10+02:00"
+	}
+}
