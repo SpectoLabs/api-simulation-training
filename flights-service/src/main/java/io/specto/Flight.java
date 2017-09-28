@@ -2,14 +2,8 @@ package io.specto;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
 
 public class Flight {
-
-    private DateTimeFormatter dateTimeFormatter = new DateTimeFormatterBuilder()
-            .appendPattern("kk:mm")
-            .toFormatter();
 
     private final String origin;
     private final String destination;
@@ -37,6 +31,6 @@ public class Flight {
     }
 
     public String getWhen() {
-        return when.format(dateTimeFormatter);
+        return when.toString();
     }
 }
