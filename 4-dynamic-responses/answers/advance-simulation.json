@@ -1,0 +1,48 @@
+{
+	"data": {
+		"pairs": [{
+			"request": {
+				"path": {
+					"exactMatch": "/api/v1/flights"
+				},
+				"method": {
+					"exactMatch": "GET"
+				},
+				"destination": {
+					"exactMatch": "localhost:8081"
+				},
+				"scheme": {
+					"exactMatch": "http"
+				},
+				"body": {
+					"exactMatch": ""
+				}
+			},
+			"response": {
+				"status": 200,
+				"body": "{{#if Request.QueryParam.plusDays}}[{\"origin\":\"{{Request.QueryParam.from}}\",\"destination\":\"{{Request.QueryParam.to}}\",\"cost\":\"4309.55\",\"when\":\"{{ iso8601DateTimePlusDays Request.QueryParam.plusDays }}\"}]{{/if}}",
+				"encodedBody": false,
+				"headers": {
+					"Content-Type": [
+						"application/json;charset=UTF-8"
+					],
+					"Date": [
+						"Fri, 29 Sep 2017 15:34:19 GMT"
+					],
+					"Hoverfly": [
+						"Was-Here"
+					]
+				},
+				"templated": true
+			}
+		}],
+		"globalActions": {
+			"delays": []
+		}
+	},
+	"meta": {
+		"schemaVersion": "v4",
+		"hoverflyVersion": "v0.14.1",
+		"timeExported": "2017-09-29T17:34:47+02:00"
+	}
+}
