@@ -1,0 +1,85 @@
+{
+	"data": {
+		"pairs": [
+			{
+				"request": {
+			    "path": {
+		        "exactMatch": "/api/v1/recommendations"
+			    },
+			    "method": {
+		        "exactMatch": "GET"
+			    },
+			    "destination": {
+		        "exactMatch": "localhost:8081"
+			    },
+			    "query": {
+		        "regexMatch": "location=(.*)"
+			    },
+			    "body": {
+		        "exactMatch": ""
+			    }
+				},
+				"response": {
+					"status": 200,
+					"body": "{\"city\":\"London\"}",
+					"encodedBody": false,
+					"headers": {
+						"Content-Type": [
+							"application/json;charset=UTF-8"
+						],
+						"Date": [
+							"Fri, 15 Sep 2017 14:42:25 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					}
+				}
+			},
+			{
+				"request": {
+			    "path": {
+		        "exactMatch": "/api/v1/recommendations"
+			    },
+			    "method": {
+		        "exactMatch": "GET"
+			    },
+			    "destination": {
+		        "exactMatch": "localhost:8081"
+			    },
+			    "query": {
+		        "exactMatch": "location=missing",
+						"regexMatch": "location=(.*)"
+			    },
+			    "body": {
+		        "exactMatch": ""
+			    }
+				},
+				"response": {
+					"status": 404,
+					"body": "",
+					"encodedBody": false,
+					"headers": {
+						"Content-Type": [
+							"application/json;charset=UTF-8"
+						],
+						"Date": [
+							"Fri, 15 Sep 2017 14:42:25 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					}
+				}
+			}
+		],
+		"globalActions": {
+			"delays": []
+		}
+	},
+	"meta": {
+		"schemaVersion": "v2",
+		"hoverflyVersion": "v0.12.2",
+		"timeExported": "2017-09-15T16:43:06+02:00"
+	}
+}

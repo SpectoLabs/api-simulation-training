@@ -1,0 +1,125 @@
+{
+	"data": {
+		"pairs": [
+			{
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/recommendations"
+					},
+					"method": {
+						"exactMatch": "GET"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"body": {
+						"exactMatch": ""
+					}
+				},
+				"response": {
+					"status": 200,
+					"body": "[\"London\", \"Paris\"]",
+					"encodedBody": false,
+					"headers": {
+						"Content-Type": [
+							"application/json;charset=UTF-8"
+						],
+						"Date": [
+							"Fri, 15 Sep 2017 14:42:25 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					}
+				}
+		  },
+			{
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/recommendations"
+					},
+					"method": {
+						"exactMatch": "GET"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"body": {
+						"exactMatch": ""
+					},
+					"query": {
+						"exactMatch": "location=nocities"
+					}
+				},
+				"response": {
+					"status": 200,
+					"body": "[]",
+					"encodedBody": false,
+					"headers": {
+						"Content-Type": [
+							"application/json;charset=UTF-8"
+						],
+						"Date": [
+							"Fri, 15 Sep 2017 14:42:25 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					}
+				}
+		  },
+			{
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/recommendations"
+					},
+					"method": {
+						"exactMatch": "GET"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"body": {
+						"exactMatch": ""
+					},
+					"query": {
+						"exactMatch": "location=invalidcity"
+					}
+				},
+				"response": {
+					"status": 400,
+					"body": "",
+					"encodedBody": false,
+					"headers": {
+						"Content-Type": [
+							"application/json;charset=UTF-8"
+						],
+						"Date": [
+							"Fri, 15 Sep 2017 14:42:25 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					}
+				}
+		  }
+		],
+		"globalActions": {
+			"delays": []
+		}
+	},
+	"meta": {
+		"schemaVersion": "v2",
+		"hoverflyVersion": "v0.12.2",
+		"timeExported": "2017-09-15T16:43:06+02:00"
+	}
+}
