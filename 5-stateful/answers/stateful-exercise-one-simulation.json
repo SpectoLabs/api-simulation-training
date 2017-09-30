@@ -2,65 +2,6 @@
 	"data": {
 		"pairs": [
 			{
-				"response": {
-					"status": 200,
-					"body": "[{\"item\":\"bacon\"}]",
-					"encodedBody": false,
-					"headers": {
-						"Content-Type": [
-							"application/json;charset=UTF-8"
-						],
-						"Date": [
-							"Mon, 25 Sep 2017 12:03:33 GMT"
-						],
-						"Hoverfly": [
-							"Was-Here"
-						]
-					},
-					"templated": false
-				},
-				"request": {
-					"path": {
-						"exactMatch": "/api/v1/shopping-basket"
-					},
-					"method": {
-						"exactMatch": "GET"
-					},
-					"destination": {
-						"exactMatch": "localhost:8081"
-					},
-					"scheme": {
-						"exactMatch": "http"
-					},
-					"query": {
-						"exactMatch": ""
-					},
-					"body": {
-						"exactMatch": ""
-					},
-					"requiresState": {
-						"basket": "bacon"
-					}
-				}
-			},
-			{
-				"response": {
-					"status": 200,
-					"body": "[]",
-					"encodedBody": false,
-					"headers": {
-						"Content-Type": [
-							"application/json;charset=UTF-8"
-						],
-						"Date": [
-							"Mon, 25 Sep 2017 12:03:33 GMT"
-						],
-						"Hoverfly": [
-							"Was-Here"
-						]
-					},
-					"templated": false
-				},
 				"request": {
 					"path": {
 						"exactMatch": "/api/v1/shopping-basket"
@@ -80,45 +21,23 @@
 					"body": {
 						"exactMatch": ""
 					}
-				}
-			},
-			{
+				},
 				"response": {
 					"status": 200,
-					"body": "",
+					"body": "{\"item\":\"{{State.basket}}\"}",
 					"encodedBody": false,
 					"headers": {
-						"Content-Length": [
-							"0"
+						"Content-Type": [
+							"application/json;charset=UTF-8"
 						],
 						"Date": [
-							"Mon, 25 Sep 2017 12:07:49 GMT"
+							"Mon, 25 Sep 2017 12:03:33 GMT"
 						],
 						"Hoverfly": [
 							"Was-Here"
 						]
 					},
-					"templated": false
-				},
-				"request": {
-					"path": {
-						"exactMatch": "/api/v1/shopping-basket"
-					},
-					"method": {
-						"exactMatch": "PUT"
-					},
-					"destination": {
-						"exactMatch": "localhost:8081"
-					},
-					"scheme": {
-						"exactMatch": "http"
-					},
-					"query": {
-						"exactMatch": ""
-					},
-					"body": {
-						"jsonMatch": "{\"item\":\"bacon\"}"
-					}
+					"templated": true
 				}
 			}
 		],

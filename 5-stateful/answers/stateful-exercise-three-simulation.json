@@ -22,7 +22,7 @@
 						"exactMatch": ""
 					},
 					"requiresState": {
-						"basket" : "bacon"
+						"basket": "bacon"
 					}
 				},
 				"response": {
@@ -62,9 +62,6 @@
 					},
 					"body": {
 						"exactMatch": ""
-					},
-					"requiresState": {
-						"basket" : "empty"
 					}
 				},
 				"response": {
@@ -84,6 +81,88 @@
 					},
 					"templated": true
 				}
+			},
+			{
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/shopping-basket"
+					},
+					"method": {
+						"exactMatch": "DELETE"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": ""
+					},
+					"body": {
+						"exactMatch": ""
+					}
+				},
+				"response": {
+					"status": 200,
+					"body": "",
+					"encodedBody": false,
+					"headers": {
+						"Content-Length": [
+							"0"
+						],
+						"Date": [
+							"Sat, 30 Sep 2017 15:06:55 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false,
+					"removesState" : ["basket"]
+				}
+			},
+			{
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/shopping-basket"
+					},
+					"method": {
+						"exactMatch": "PUT"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": ""
+					},
+					"body": {
+						"jsonMatch": "{\"item\":\"bacon\"}"
+					}
+				},
+				"response": {
+					"status": 200,
+					"body": "",
+					"encodedBody": false,
+					"headers": {
+						"Content-Length": [
+							"0"
+						],
+						"Date": [
+							"Sat, 30 Sep 2017 15:11:50 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false,
+					"transitionsState" : {
+						"basket" : "bacon"
+					}
+				}
 			}
 		],
 		"globalActions": {
@@ -92,7 +171,7 @@
 	},
 	"meta": {
 		"schemaVersion": "v4",
-		"hoverflyVersion": "v0.14.0",
-		"timeExported": "2017-09-25T14:19:11+02:00"
+		"hoverflyVersion": "v0.14.2",
+		"timeExported": "2017-09-30T17:13:35+02:00"
 	}
 }
