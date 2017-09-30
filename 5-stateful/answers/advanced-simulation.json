@@ -1,0 +1,398 @@
+{
+	"data": {
+		"pairs": [
+			{
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/blogs"
+					},
+					"method": {
+						"exactMatch": "POST"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": ""
+					},
+					"body": {
+						"jsonMatch": "{\"content\":\"the blog content\"}"
+					}
+				},
+				"response": {
+					"status": 200,
+					"body": "",
+					"encodedBody": false,
+					"headers": {
+						"Date": [
+							"Sat, 30 Sep 2017 15:11:50 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false,
+					"transitionsState": {
+						"blogStatus": "draft"
+					}
+				}
+			},
+			{
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/blogs/1"
+					},
+					"method": {
+						"exactMatch": "GET"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": ""
+					},
+					"body": {
+						"jsonMatch": ""
+					}
+				},
+				"response": {
+					"status": 404,
+					"body": "",
+					"encodedBody": false,
+					"headers": {
+						"Date": [
+							"Sat, 30 Sep 2017 15:11:50 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false
+				}
+			},
+			{
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/blogs/1"
+					},
+					"method": {
+						"exactMatch": "GET"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": ""
+					},
+					"body": {
+						"jsonMatch": ""
+					},
+					"requiresState": {
+						"blogStatus": "draft"
+					}
+				},
+				"response": {
+					"status": 200,
+					"body": "{\"content\":\"the blog content\", \"status\": \"draft\"}",
+					"encodedBody": false,
+					"headers": {
+						"Date": [
+							"Sat, 30 Sep 2017 15:11:50 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false
+				}
+			},
+			{
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/blogs/1"
+					},
+					"method": {
+						"exactMatch": "GET"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": ""
+					},
+					"body": {
+						"jsonMatch": ""
+					},
+					"requiresState": {
+						"blogStatus": "review"
+					}
+				},
+				"response": {
+					"status": 200,
+					"body": "{\"content\":\"the blog content\", \"status\": \"review\"}",
+					"encodedBody": false,
+					"headers": {
+						"Date": [
+							"Sat, 30 Sep 2017 15:11:50 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false
+				}
+			},
+			{
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/blogs/1"
+					},
+					"method": {
+						"exactMatch": "GET"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": ""
+					},
+					"body": {
+						"jsonMatch": ""
+					},
+					"requiresState": {
+						"blogStatus": "published"
+					}
+				},
+				"response": {
+					"status": 200,
+					"body": "{\"content\":\"the blog content\", \"status\": \"published\"}",
+					"encodedBody": false,
+					"headers": {
+						"Date": [
+							"Sat, 30 Sep 2017 15:11:50 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false
+				}
+			},
+			{
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/blogs/1"
+					},
+					"method": {
+						"exactMatch": "DELETE"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": ""
+					},
+					"body": {
+						"jsonMatch": ""
+					}
+				},
+				"response": {
+					"status": 200,
+					"body": "",
+					"encodedBody": false,
+					"headers": {
+						"Date": [
+							"Sat, 30 Sep 2017 15:11:50 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false,
+					"removesState": [
+            "blogStatus"
+          ]
+				}
+			},
+			{
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/blogs/1"
+					},
+					"method": {
+						"exactMatch": "PUT"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": ""
+					}
+				},
+				"response": {
+					"status": 404,
+					"body": "",
+					"encodedBody": false,
+					"headers": {
+						"Date": [
+							"Sat, 30 Sep 2017 15:11:50 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false
+				}
+			}, {
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/blogs/1/status"
+					},
+					"method": {
+						"exactMatch": "PUT"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": ""
+					},
+					"body": {
+						"jsonMatch": "{\"status\":\"review\"}"
+					},
+					"requiresState": {
+						"blogStatus": "draft"
+					}
+				},
+				"response": {
+					"status": 200,
+					"body": "",
+					"encodedBody": false,
+					"headers": {
+						"Date": [
+							"Sat, 30 Sep 2017 15:11:50 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false,
+					"transitionsState": {
+						"blogStatus": "review"
+					}
+				}
+			}, {
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/blogs/1/status"
+					},
+					"method": {
+						"exactMatch": "PUT"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": ""
+					},
+					"body": {
+						"jsonMatch": "{\"status\":\"published\"}"
+					},
+					"requiresState": {
+						"blogStatus": "review"
+					}
+				},
+				"response": {
+					"status": 200,
+					"body": "",
+					"encodedBody": false,
+					"headers": {
+						"Date": [
+							"Sat, 30 Sep 2017 15:11:50 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false,
+					"transitionsState": {
+						"blogStatus": "published"
+					}
+				}
+			}, {
+				"request": {
+					"path": {
+						"exactMatch": "/api/v1/blogs"
+					},
+					"method": {
+						"exactMatch": "POST"
+					},
+					"destination": {
+						"exactMatch": "localhost:8081"
+					},
+					"scheme": {
+						"exactMatch": "http"
+					},
+					"query": {
+						"exactMatch": ""
+					},
+					"body": {
+						"jsonMatch": "{\"status\":\"published\"}"
+					},
+					"requiresState": {
+						"blogStatus": "draft"
+					}
+				},
+				"response": {
+					"status": 400,
+					"body": "",
+					"encodedBody": false,
+					"headers": {
+						"Date": [
+							"Sat, 30 Sep 2017 15:11:50 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						]
+					},
+					"templated": false
+				}
+			}
+		],
+		"globalActions": {
+			"delays": []
+		}
+	},
+	"meta": {
+		"schemaVersion": "v4",
+		"hoverflyVersion": "v0.14.2",
+		"timeExported": "2017-09-30T17:13:35+02:00"
+	}
+}
