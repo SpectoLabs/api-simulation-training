@@ -21,33 +21,33 @@ import static org.hamcrest.Matchers.is;
 
 public class RecommendationConsumerPactTests {
 
-    @Rule
-    public PactProviderRuleMk2 mockProvider = new PactProviderRuleMk2("recommendation_provider", "localhost", 8081, this);
+//    @Rule
+//    public PactProviderRuleMk2 mockProvider = new PactProviderRuleMk2("recommendation_provider", "localhost", 8081, this);
 
     private RestTemplate restTemplate = new RestTemplate();
     private RecommendationConsumer recommendationConsumer = new RecommendationConsumer(restTemplate);
 
-    @Pact(provider = "recommendation_provider", consumer = "recommendation_consumer")
-    public RequestResponsePact createPact(PactDslWithProvider builder) {
-        Map<String, String> headers = ImmutableMap.of("Content-Type", MediaType.APPLICATION_JSON_VALUE);
+//    @Pact(provider = "recommendation_provider", consumer = "recommendation_consumer")
+//    public RequestResponsePact createPact(PactDslWithProvider builder) {
+//        Map<String, String> headers = ImmutableMap.of("Content-Type", MediaType.APPLICATION_JSON_VALUE);
+//
+//        return builder
+//                .given("no particular state")
+//                .uponReceiving("A request for recommendation")
+//                .path("/api/v1/recommendations")
+//                .method("GET")
+//                .willRespondWith()
+//                .status(200)
+//                .headers(headers)
+//                .body("{\"location\":\"London\"}")
+//                .toPact();
+//    }
 
-        return builder
-                .given("no particular state")
-                .uponReceiving("A request for recommendation")
-                .path("/api/v1/recommendations")
-                .method("GET")
-                .willRespondWith()
-                .status(200)
-                .headers(headers)
-                .body(new PactDslJsonBody().stringType("location"))
-                .toPact();
-    }
-
-    @Test
-    @PactVerification("recommendation_provider")
-    public void runTest() {
-        Recommendation recommendation = recommendationConsumer.getRecommendation();
-
-        assertThat(recommendation.getLocation(), is(instanceOf(String.class)));
-    }
+//    @Test
+//    @PactVerification("recommendation_provider")
+//    public void runTest() {
+//        Recommendation recommendation = recommendationConsumer.getRecommendation();
+//
+//        assertThat(recommendation.getLocation(), is(instanceOf(String.class)));
+//    }
 }

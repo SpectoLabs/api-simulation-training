@@ -19,22 +19,22 @@ import org.springframework.web.context.ConfigurableWebApplicationContext;
 @PactFolder("pacts")
 public class RecommendationPactVerificationTests {
 
-    @TestTarget
-    public final Target target = new HttpTarget("http", "localhost", 8081, "/");
-
-    private static ConfigurableWebApplicationContext application;
-
-    @BeforeClass
-    public static void start() {
-        application = (ConfigurableWebApplicationContext) SpringApplication.run(FlightsApplication.class);
-    }
-
-    @AfterClass
-    public static void end() {
-        application.close();
-    }
-
-    @State("no particular state")
-    public void toGetState() {
-    }
+//    @TestTarget
+//    public final Target target = new HttpTarget("http", "localhost", 8081, "/");
+//
+//    private static ConfigurableWebApplicationContext application;
+//
+//    @BeforeClass
+//    public static void start() {
+//        application = (ConfigurableWebApplicationContext) SpringApplication.run(FlightsApplication.class);
+//    }
+//
+//    @AfterClass
+//    public static void end() {
+//        application.close();
+//    }
+//
+//    @State("no particular state")
+//    public void toGetState() {
+//    }
 }

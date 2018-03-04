@@ -13,8 +13,11 @@ public class RecommendationsController {
 
     @RequestMapping(method = GET)
     public Recommendation getRecommendation() {
-        String[] locationSelection = {"London", "New York", "Beijing", "Tokyo"};
-        String location = locationSelection[new Random().nextInt(locationSelection.length)];
-        return  new Recommendation(location);
+        return null;
+//        return new Recommendation("London");
+
+//        String[] locationSelection = {"London", "New York", "Beijing", "Tokyo"};
+//        String location = locationSelection[new Random().nextInt(locationSelection.length)];
+//        return  new Recommendation(location);
     }
 }

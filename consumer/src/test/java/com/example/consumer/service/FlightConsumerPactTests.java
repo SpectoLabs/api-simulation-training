@@ -11,6 +11,7 @@ import au.com.dius.pact.model.RequestResponsePact;
 import com.example.consumer.model.Flight;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.common.collect.ImmutableMap;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.springframework.http.MediaType;
@@ -54,6 +55,7 @@ public class FlightConsumerPactTests {
     }
 
     @Test
+    @Ignore
     @PactVerification("flights_provider")
     public void runTest() {
         List<Flight> flights = flightConsumer.getAvailableFlights();
