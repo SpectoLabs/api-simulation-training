@@ -3,6 +3,7 @@ build/
 out/
 target/
 logs/
+pacts/
 .idea/
 *.iml
 **config.yaml
