@@ -7,6 +7,7 @@ import au.com.dius.pact.provider.junit.loader.PactFolder;
 import au.com.dius.pact.provider.junit.target.HttpTarget;
 import au.com.dius.pact.provider.junit.target.Target;
 import au.com.dius.pact.provider.junit.target.TestTarget;
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.springframework.boot.SpringApplication;
@@ -25,6 +26,11 @@ public class FlightsPactVerificationTests {
     @BeforeClass
     public static void start() {
         application = (ConfigurableWebApplicationContext) SpringApplication.run(FlightsApplication.class);
+    }
+
+    @AfterClass
+    public static void end() {
+        application.close();
     }
 
     @State("test state")
