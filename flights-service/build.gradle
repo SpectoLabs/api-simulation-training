@@ -28,4 +28,5 @@ dependencies {
 	compile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.8.6'
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile('au.com.dius:pact-jvm-provider-junit_2.12:3.5.13')
 }
