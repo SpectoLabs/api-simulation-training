@@ -1,0 +1,53 @@
+{
+  "data": {
+    "pairs": [
+      {
+        "request": {
+          "path": {
+            "exactMatch": "/api/v1/flights"
+          },
+          "method": {
+            "exactMatch": "GET"
+          },
+          "destination": {
+            "exactMatch": "localhost:8081"
+          },
+          "scheme": {
+            "exactMatch": "http"
+          },
+          "query": {
+            "exactMatch": ""
+          },
+          "body": {
+            "exactMatch": ""
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": "[{\"origin\":\"Milan\",\"destination\":\"Dubai\",\"cost\":\"2156.86\",\"when\":\"2018-03-03T02:36:50.966\"},{\"origin\":\"London\",\"destination\":\"Boston\",\"cost\":\"4825.46\",\"when\":\"2018-03-03T13:44:50.966\"},{\"origin\":\"London\",\"destination\":\"Boston\",\"cost\":\"2043.49\",\"when\":\"2018-03-03T10:11:50.966\"},{\"origin\":\"Milan\",\"destination\":\"New York\",\"cost\":\"489.41\",\"when\":\"2018-03-03T08:14:50.966\"}]",
+          "encodedBody": false,
+          "headers": {
+            "Content-Type": [
+              "application/json;charset=UTF-8"
+            ],
+            "Date": [
+              "Sat, 03 Mar 2018 10:42:50 GMT"
+            ],
+            "Hoverfly": [
+              "Was-Here"
+            ]
+          },
+          "templated": false
+        }
+      }
+    ],
+    "globalActions": {
+      "delays": []
+    }
+  },
+  "meta": {
+    "schemaVersion": "v4",
+    "hoverflyVersion": "v0.15.1",
+    "timeExported": "2018-03-03T10:42:58Z"
+  }
+}
